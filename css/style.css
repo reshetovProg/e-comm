@@ -1,5 +1,9 @@
 @import url("../fonts/icon-fonts/style.css");
 @font-face {
+  font-family: "Raleway-Bold";
+  src: url(../fonts/Raleway-Bold.ttf);
+}
+@font-face {
   font-family: "Proxima-black";
   src: url(../fonts/proximanova_black.ttf);
 }
@@ -45,7 +49,6 @@ img,
 ins,
 kbd,
 q,
-s,
 samp,
 small,
 strike,
@@ -291,6 +294,69 @@ body {
 }
 .menu-button .line-center.active {
   display: none;
+}
+
+.banner {
+  width: 100%;
+  --wdth: 100vw;
+}
+.banner__top {
+  display: flex;
+  width: 100%;
+  height: calc(var(--wdth) / 2.3);
+  background-image: url("/img/Promotion Image.png");
+  background-size: cover;
+  color: white;
+  font-size: calc(var(--wdth) * 0.05);
+  font-family: "Poppins-Bold";
+  align-items: center;
+  line-height: 2.5ex;
+}
+.banner__bottom {
+  display: flex;
+  width: 100%;
+}
+.banner__recom {
+  width: 100%;
+  position: relative;
+  top: -100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.recom {
+  width: 33%;
+  height: 100%;
+  max-width: 318px;
+  max-height: 258px;
+  background-image: url(/img/products/product2.png);
+  background-size: cover;
+  padding: 50px;
+}
+
+.product__title {
+  width: 202px;
+  height: 58px;
+  font-size: 20px;
+  font-family: "Poppins-Bold";
+  color: #262626;
+}
+.product__discount {
+  font-size: 18px;
+}
+.product__discount #old-price {
+  color: #9098B1;
+  font-family: "Poppins-Regular";
+}
+.product__discount #discount {
+  color: #FB7181;
+  font-family: "Poppins-Bold";
+}
+.product__price {
+  color: #40BFFF;
+  font-family: "Raleway-Bold";
+  font-size: 30px;
 }
 
 @media screen and (max-width: 660px) {
