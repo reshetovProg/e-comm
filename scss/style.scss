@@ -27,6 +27,16 @@
 	src: url(../fonts/Poppins-Medium.ttf)
 }
 
+@font-face {
+	font-family: 'Poppins-SemiBold';
+	src: url(../fonts/Poppins-SemiBold.ttf)
+}
+
+@font-face {
+	font-family: 'Poppins-Regular';
+	src: url(../fonts/Poppins-Regular.ttf)
+}
+
 $myBlack: #262626;
 $myBlue: #40BFFF;
 $myRed: #FB7181;
@@ -366,15 +376,17 @@ body {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
+		height: 358px;
+		overflow: hidden;
 
 	}
 }
 
 .recom {
-	width: 33%;
-	height: 100%;
-	max-width: 318px;
-	max-height: 258px;
+	//width: 33%;
+	//height: 100%;
+	width: 318px;
+	height: 258px;
 	background-image: url(/img/products/product2.png);
 	background-size: cover;
 	padding: 50px;
@@ -411,6 +423,105 @@ body {
 	}
 }
 
+.best-seller {
+	display: flex;
+	width: 100%;
+	//padding: 20px;
+	align-items: center;
+	flex-direction: column;
+
+	a {
+		font-family: 'Poppins-Medium';
+		font-size: 20px;
+		color: $myBlue;
+		line-height: 30px;
+		border-bottom: solid 2px $myBlue;
+	}
+
+	&__header {
+		font-family: 'Poppins-SemiBold';
+		font-size: 35px;
+	}
+
+	&__menu {
+		width: 40%;
+
+		ul {
+			margin-top: 25px;
+			display: flex;
+			justify-content: space-around;
+		}
+
+		li {
+			//display: inline-block;
+			font-family: 'Poppins-Regular';
+			font-size: 22px;
+			margin: 5px;
+		}
+	}
+
+	&__products {
+
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.product-box {
+			border: solid 2px #F6F7F8;
+			margin: 20px;
+			display: inline-block;
+
+
+			&__img {
+				background-image: url(/img/products/product2.png);
+				background-size: cover;
+				width: 300px;
+				height: 272px;
+
+			}
+
+			&__stars {
+				display: flex;
+				justify-content: center;
+
+				.icon-star {
+					margin: 0px 7px;
+				}
+			}
+
+			&__price {
+				display: flex;
+				justify-content: center;
+				margin: 22px 0px;
+
+				.product__price {
+
+					font-size: 18px;
+				}
+
+				.product__discount {
+					font-size: 14px;
+
+					#old-price {
+						margin: 0px 7px;
+					}
+				}
+			}
+
+			.product {
+				&__title {
+					font-size: 18px;
+					width: 100%;
+					height: auto;
+					text-align: center;
+					margin: 22px 0px;
+				}
+			}
+		}
+	}
+}
+
 
 
 
@@ -431,7 +542,22 @@ body {
 		right: 195px;
 	}
 
+	.banner__top {
+		align-items: flex-start;
+		padding: 50px;
+	}
 
+	.banner__recom {
+		height: 258px;
+	}
+
+	.recom {
+		width: 298px;
+		height: 238px;
+		padding: 10px;
+
+
+	}
 }
 
 @media screen and (max-width: 1280px) {
